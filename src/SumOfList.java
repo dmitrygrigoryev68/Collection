@@ -2,7 +2,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class SumOfList<T extends Number> {
-    public Double sumOfList(List<T> list) {
+    public double sumOfList(List<T> list) {
         return list
                 .stream()
                 .collect(Collectors

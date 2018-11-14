@@ -7,9 +7,9 @@ public class Main {
         Collection coll = new Collection();
         SumOfList sumOfList = new SumOfList();
         Integer[] arrIn = {1, 2, 3, 4};
-        String [] arrSt = {"aaa","bbb","ccc","ddd"};
+        String [] arrSt = {"aaa","bbb","ccc","ddd","eee"};
         Double [] arrDo = {1.,2.,3.,4.};
-        Long   [] arrLo = {1L,2L,3L,4L};
+        Long   [] arrLo = {1L,2L,3L,4L,5L};
 
 
         List<Integer> list1 = new ArrayList();
@@ -19,6 +19,7 @@ public class Main {
         List<Integer> list5 = new LinkedList<>();
         List<Integer> list6 = new LinkedList<>();
         List<Double> list7 = new LinkedList<>();
+        List<Long> list8 = new LinkedList<>();
 
         Collections.addAll(list1, 1, 2, 3, 4);
         Collections.addAll(list2, 6, 2, 3, 0);
@@ -27,6 +28,7 @@ public class Main {
         Collections.addAll(list5, 1, 2, 3, 4);
         Collections.addAll(list6, 2, 3, 4, 1);
         Collections.addAll(list7, 2., 3., 4., 1.);
+        Collections.addAll(list8, 2L, 3L, 4L, 1L);
 
         System.out.println(coll.compareLists(list1, list2));
         System.out.println(coll.checkListsCircle(list5, list6));
@@ -39,7 +41,8 @@ public class Main {
         System.out.println(coll.countGreaterThan(arrDo, 2.));
         System.out.println(coll.countGreaterThan(arrLo, 2L));
         System.out.println(sumOfList.sumOfList(list7));
-        System.out.println(sumOfList.sumOfList(list6 ));
+        System.out.println(sumOfList.sumOfList(list6));
+        System.out.println(sumOfList.sumOfList(list8));
 
     }
 }
