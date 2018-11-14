@@ -3,13 +3,6 @@ import java.util.*;
 
 public class Collection<T extends Comparable<T>> {
 
-
-    public boolean addAllTest(int index, List<T> arrToAdd) {
-        List<T> elementsArr = new ArrayList<>();
-        elementsArr.addAll(index, arrToAdd);
-        return true;
-    }
-
     public List<String> compareLists(List<T> list1, List<T> list2) {
         List<String> resList = new LinkedList<>();
         for (int i = 0; i < list1.size(); i++)
