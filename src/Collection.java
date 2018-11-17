@@ -1,7 +1,6 @@
 import java.util.*;
 
-
-public class Collection<T extends Comparable<T>> {
+public class Collection<T> {
 
     public List<String> compareLists(List<T> list1, List<T> list2) {
         List<String> resList = new LinkedList<>();
@@ -42,11 +41,18 @@ public class Collection<T extends Comparable<T>> {
         return list;
     }
 
-    public long countGreaterThan(T[] arr, T obj) {
-        List<T> list = Arrays.asList(arr);
+    public static double sumOfList(List<? extends Number> list) {
         return list
                 .stream()
-                .filter(s -> s.compareTo(obj) > 0)
+                .mapToDouble(n -> n.doubleValue())
+                .sum();
+    }
+
+    public static <T extends Comparable> long countGreaterThan(T[] arr, T obj) {
+        return Arrays
+                .asList(arr)
+                .stream()
+                .filter(e -> e.compareTo(obj) > 0)
                 .count();
     }
 }
