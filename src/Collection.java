@@ -41,14 +41,14 @@ public class Collection<T> {
         return list;
     }
 
-    public static double sumOfList(List<? extends Number> list) {
+    public double sumOfList(List<? extends Number> list) {
         return list
                 .stream()
                 .mapToDouble(n -> n.doubleValue())
                 .sum();
     }
 
-    public static <T extends Comparable> long countGreaterThan(T[] arr, T obj) {
+    public <T extends Comparable> long countGreaterThan(T[] arr, T obj) {
         return Arrays
                 .asList(arr)
                 .stream()
